@@ -7,7 +7,7 @@ module.exports = class leave {
 
     async run(client, message, args) {
         try{
-            message.channel.send("bye ;(")
+            message.channel.send("bay bay ;(")
             message.guild.leave();
         }catch(e) {
             throw e;

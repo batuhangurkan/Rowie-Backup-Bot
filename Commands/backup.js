@@ -16,28 +16,28 @@ module.exports = class backup {
 
     async run(client, message, args) {
         try{
-            let info = client.emojis.get("655091815401127966") || "ℹ️" //https://cdn.discordapp.com/emojis/655091815401127966.png?v=1
-            let waiting = client.emojis.get("655695570769412096") || "⌛" //https://images-ext-1.discordapp.net/external/lWj3uW4qvfFB9t0QgGsDJ8vLvh5bSObQ-wwUxYFH4wo/https/images-ext-1.discordapp.net/external/AzWR8HxPJ4t4rPA1DagxJkZsOCOMp4OTgwxL3QAjF4U/https/cdn.discordapp.com/emojis/424900448663633920.gif
-            let green = client.emojis.get("655696285286006784") || "✅"//https://images-ext-2.discordapp.net/external/NU9I3Vhi79KV6srTXLJuHxOgiyzmEwgS5nFAbA13_YQ/https/cdn0.iconfinder.com/data/icons/small-n-flat/24/678134-sign-check-512.png
-            let error = client.emojis.get("655704809483141141") || "❌" //https://cdn.discordapp.com/emojis/655704809483141141.png?v=1
-            let warning = client.emojis.get("656030540310380574") || "⚠️" //https://cdn.discordapp.com/emojis/656030540310380574.png?v=1
+            let info = client.emojis.get("655091815401127966") || "ℹ️" 
+            let waiting = client.emojis.get("655695570769412096") || "⌛" 
+            let green = client.emojis.get("655696285286006784") || "✅"
+            let error = client.emojis.get("655704809483141141") || "❌" 
+            let warning = client.emojis.get("656030540310380574") || "⚠️" 
 
 
             let guildsonlyEmbed = new RichEmbed()
-            .setTitle(`${error} Error`)
-            .setDescription(`This command **can't be used** in **private** messages
+            .setTitle(`${error} Hata`)
+            .setDescription(`Bu komut **kullanılamaz** içinde **özel** mesaj
             
-            [Support](https://discord.gg/Sh9k2ts)`)
+            [Destek](https://discord.gg/Sh9k2ts)`)
             .setColor("#a11616")
             if (message.channel.type === 'dm') return message.channel.send(guildsonlyEmbed);
             if(args[1] === "create") {
              await   message.guild.roles.filter(r => r.name !== message.guild.member(client.user.id).highestRole.name).forEach(r => {
                     if (r.comparePositionTo(message.guild.member(client.user.id).highestRole) > 0){
                         let havnthighest = new RichEmbed()
-                            .setTitle(`${warning}  Warning`)
-                            .setDescription(`The Xenon Role Is Not The Highest Role In The Server , This May Cause Some Errors When Loading The Backup. !
+                            .setTitle(`${warning}  Uyarı`)
+                            .setDescription(`Xenon Rolü Sunucudaki En Yüksek Rol Değil, Bu Yedekleme Yüklenirken Bazı Hatalara Neden Olabilir. !
                             
-                            [Support](https://discord.gg/Sh9k2ts)`)
+                            [Destek](https://discord.gg/Sh9k2ts)`)
                             .setColor("#a11616")
                         message.channel.send(havnthighest) 
                     }
@@ -46,8 +46,8 @@ module.exports = class backup {
                 
 
                 let creatingEmbed = new RichEmbed()
-                .setTitle(`${waiting}  Please wait ...`)
-                .setDescription("Creating backup ... Please wait")
+                .setTitle(`${waiting}  Lütfen Bekle ...`)
+                .setDescription("Yedek oluşturuluyor ... Lütfen bekleyin")
                 message.channel.send(creatingEmbed).then(m => {
 
                 let id = makeid(16)
@@ -89,8 +89,8 @@ module.exports = class backup {
                 
             save();
                 let result = new RichEmbed()
-                .setTitle(`${info}  Info`)
-                .setDescription(`Created backup of **${message.guild.name}** with the Backup id \`${id}\``)
+                .setTitle(`${info}  Bilgilendirme`)
+                .setDescription(`Yedek oluşturuldu **${message.guild.name}** Yedekleme kimliğiyle \`${id}\``)
                 .addField("Usage", `\`\`\`x!backup load ${id}\`\`\`
 \`\`\`x!backup info ${id}\`\`\``)
                 .setColor("#5DBCD2")
@@ -99,7 +99,7 @@ module.exports = class backup {
 
             let resultPublic = new RichEmbed()
             .setTitle(`${green}  Voila!`)
-            .setDescription(`Created backup of **${message.guild.name}** with the Backup id \`${id}\``)
+            .setDescription(`Yedek oluşturuldu **${message.guild.name}** Yedekleme kimliğiyle \`${id}\``)
             .addField("Usage", `\`\`\`x!backup load ${id}\`\`\`
 \`\`\`x!backup info ${id}\`\`\``)
             .setColor("#59C57B")
@@ -113,17 +113,17 @@ module.exports = class backup {
             if(args[1] === "delete") {
                 let code = args[2];
                 let errorEmbed = new RichEmbed()
-                .setTitle(`${error}  Error`)
-                .setDescription(`You forgot to define the argument backup_id. Use x!help backup load for more information.
-[Support](https://discord.club/discord)`)
+                .setTitle(`${error}  Hata`)
+                .setDescription(`Argümanı tanımlamayı unuttun backup_id. Use x!help daha fazla bilgi için yedek yük.
+[Support](https://discord.gg/)`)
                 .setColor("#a11616")
                 if(!code) return message.channel.send(errorEmbed)
 
                 let cantfindbackup = new RichEmbed()
-                .setTitle(`${error}  Error`)
-                .setTitle(`You have no backup with the id ${code}.`)
+                .setTitle(`${error}  Hata`)
+                .setTitle(`Kimliğine sahip yedeklemeniz yok ${code}.`)
                 .setDescription(`
-[Support](https://discord.club/discord)`)
+[Support](https://discord.gg/)`)
                 .setColor("#a11616")
                 if(!backups[message.author.id][code]) return message.channel.send(cantfindbackup)
 
@@ -132,7 +132,7 @@ module.exports = class backup {
 
                 let deletedsuc = new RichEmbed()
                     .setTitle(`${green}  Voila!`)
-                    .setDescription(`Successfully **deleted backup**.`)
+                    .setDescription(`Başarılı olarak **silinen yedekleme**.`)
                     .setColor("#59C57B")
                     message.channel.send(deletedsuc)
 
@@ -142,23 +142,23 @@ module.exports = class backup {
                 let error = client.emojis.get("655704809483141141") || "❌"
                 let code = args[2];
                 let errorEmbed = new RichEmbed()
-                .setTitle(`${error}  Error`)
-                .setDescription(`You forgot to define the argument backup_id. Use x!help backup load for more information.
+                .setTitle(`${error}  Hata`)
+                .setDescription(`Backup_id argümanını tanımlamayı unuttunuz. Daha fazla bilgi için x! Help backup load kullanın.
 [Support](https://discord.club/discord)`)
                 if(!code) return message.channel.send(errorEmbed)
                 let cantfindbackup = new RichEmbed()
-                .setTitle(`${error}  Error`)
-                .setTitle(`You have no backup with the id ${code}.`)
+                .setTitle(`${error}  Hata`)
+                .setTitle(`Kimliğine sahip yedeklemeniz yok ${code}.`)
                 .setDescription("[Support](https://discord.club/discord)")
                 .setColor("#a11616")
                 if(!backups[message.author.id][code]) return message.channel.send(cantfindbackup)
                 
                 message.guild.channels.forEach(channel => {
-                    channel.delete('For Loading A Backup')
+                    channel.delete('Yedekleme Yüklemek için')
                 })
 
                 message.guild.roles.filter(role => role.members.every(member => !member.user.bot)).forEach(role => {
-                    role.delete('For Loading A Backup')
+                    role.delete('Yedekleme Yüklemek için')
                 })
                 await backups[message.author.id][code].roles.forEach(async function (role) {
                         message.guild.createRole({ name: role.name, color: role.color, permissions: role.permissions, hoist: role.hoist, mentionable: role.mentionable, position: role.position }).then(role => {
@@ -194,7 +194,7 @@ module.exports = class backup {
 
                 let cantfindEmbed = new RichEmbed()
                 .setTitle(`${error}  Error`)
-                .setDescription(`You have **no backup** with the id \`${id}\`.
+                .setDescription(`Var **yedek yok** kimliğiyle \`${id}\`.
                 "[Support](https://discord.club/discord)`)
                 .setColor("#a11616")
                 if(!backups[message.author.id][id]) return message.channel.send(cantfindEmbed)
@@ -203,11 +203,11 @@ module.exports = class backup {
                 let infoEmbed = new RichEmbed()
                 .setTitle(backups[message.author.id][id].name)
                 .setThumbnail(backups[message.author.id][id].icon)
-                .addField("Creator", `<@${backups[message.author.id][id].owner}>`, true)
-                .addField("Members", backups[message.author.id][id].members, true)
-                .addField("Created At", backups[message.author.id][id].createdAt)
-                .addField("Channels", `\`\`\`${backups[message.author.id][id].channels.map(channel => channel.name).join('\n')}\`\`\``, true)
-                .addField("Roles", `\`\`\`${backups[message.author.id][id].roles.map(role => role.name).join('\n')}\`\`\``, true)
+                .addField("yaratıcı", `<@${backups[message.author.id][id].owner}>`, true)
+                .addField("Üye", backups[message.author.id][id].members, true)
+                .addField("Oluşturma tarihi", backups[message.author.id][id].createdAt)
+                .addField("Kanal", `\`\`\`${backups[message.author.id][id].channels.map(channel => channel.name).join('\n')}\`\`\``, true)
+                .addField("Roller", `\`\`\`${backups[message.author.id][id].roles.map(role => role.name).join('\n')}\`\`\``, true)
                 message.channel.send(infoEmbed)
                 }catch(e) {
                     hastebins(backups[message.author.id][id].channels.map(channel => channel.name).join('\n'), 'txt').then(ch => {
@@ -215,11 +215,11 @@ module.exports = class backup {
                     let infoEmbed = new RichEmbed()
                         .setTitle(backups[message.author.id][id].name)
                         .setThumbnail(backups[message.author.id][id].icon)
-                        .addField("Creator", `<@${backups[message.author.id][id].owner}>`, true)
-                        .addField("Members", backups[message.author.id][id].members, true)
-                        .addField("Created At", backups[message.author.id][id].createdAt)
-                        .addField("Channels", ch, true)
-                        .addField("Roles", ro, true)
+                        .addField("Yaratrıcı", `<@${backups[message.author.id][id].owner}>`, true)
+                        .addField("Üyeler", backups[message.author.id][id].members, true)
+                        .addField("Oluşturma Tarihi", backups[message.author.id][id].createdAt)
+                        .addField("Kanal", ch, true)
+                        .addField("Roller", ro, true)
                     message.channel.send(infoEmbed)
                     })
                 })
@@ -230,9 +230,9 @@ module.exports = class backup {
 
             if(args === "purge") {
                 let warningEmbed = new RichEmbed()
-                .setTitle(`${warning}  Warning`)
-                .setDescription(`Are you sure that you want to delete all your backups?
-__This cannot be undone!__`)
+                .setTitle(`${warning}  Hata`)
+                .setDescription(`Tüm yedeklerinizi silmek istediğinizden emin misiniz??
+__Tgeri alınamaz!__`)
                 message.channel.sendEmbed(warningEmbed).then(msg => {
                     msg.react('✅')
                         .then(() => msg.react('❌'))
@@ -250,7 +250,7 @@ __This cannot be undone!__`)
 
                         let deletedsuc = new RichEmbed()
                             .setTitle(`${green}  Voila!`)
-                            .setDescription(`Deleted all your backups.`)
+                            .setDescription(`Tüm yedeklerinizi sildiniz.`)
                             .setColor("#59C57B")
                         message.channel.send(deletedsuc)
                     })
@@ -267,17 +267,17 @@ __This cannot be undone!__`)
                 const embed = new RichEmbed()
                 .setTitle(`**x!backup**
 
-Create & load backups of your servers
+Sunucularınızın yedeklerini oluşturun ve yükleyin
 
-__**Commands**__
+__**Komutlar**__
 `)
                 .setDescription(`
-                x!backup create        Create a backup
-                x!backup delete        Delete one of your backups
-                x!backup info          Get information about a backup
-                x!backup list          Get a list of your backups
-                x!backup load          Load a backup
-                x!backup purge         Delete all your backups`)
+                x!backup create        Yedek oluşturma
+                x!backup delete        Yedeklemelerinizden birini silin
+                x!backup info          Yedekleme hakkında bilgi alma
+                x!backup list          Yedeklemelerinizin bir listesini alın
+                x!backup load          Bir yedek yükleyin
+                x!backup purge         Tüm yedeklerinizi silin`)
                 .addBlankField()
                 .setFooter(`Use \`x!help [command]\` for more info on a command.
 You can also use \`x!help [category]\` for more info on a category.`)

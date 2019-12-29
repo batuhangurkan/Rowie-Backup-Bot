@@ -13,12 +13,12 @@ module.exports = class info {
          .setTitle("**Xenon**")
          .setThumbnail("https://cdn.discordapp.com/avatars/416358583220043796/8f702ebf579bce2d7a6f0a4419ac5faf.webp?size=1024")
          .setDescription("Server Backups, Templates and more")
-         .addField("Invite", "[Click Here](https://discordapp.com/oauth2/authorize?client_id=416358583220043796&scope=bot&permissions=8)", true)
+         .addField("Davet", "[Click Here](https://discordapp.com/oauth2/authorize?client_id=416358583220043796&scope=bot&permissions=8)", true)
          .addField("Discord", "[Click Here](https://discord.club/discord)")
          .addField("Prefix", "x!", true)
-         .addField("Guilds", client.guilds.size, true)
-         .addField("Users:", client.users.size, true)
-         .setFooter("Owned by ~ REVENGE#2179")
+         .addField("Sunucular", client.guilds.size, true)
+         .addField("Kullanıcılar:", client.users.size, true)
+         .setFooter("Owned by : RealCode")
             message.channel.send(infoEmbed)
         }catch(e) {
             throw e;
