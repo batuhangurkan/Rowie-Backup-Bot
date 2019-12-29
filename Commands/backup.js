@@ -27,7 +27,7 @@ module.exports = class backup {
             .setTitle(`${error} Error`)
             .setDescription(`This command **can't be used** in **private** messages
             
-            [Support](https://discord.club/discord)`)
+            [Support](https://discord.gg/Sh9k2ts)`)
             .setColor("#a11616")
             if (message.channel.type === 'dm') return message.channel.send(guildsonlyEmbed);
             if(args[1] === "create") {
@@ -37,7 +37,7 @@ module.exports = class backup {
                             .setTitle(`${warning}  Warning`)
                             .setDescription(`The Xenon Role Is Not The Highest Role In The Server , This May Cause Some Errors When Loading The Backup. !
                             
-                            [Support](https://discord.club/discord)`)
+                            [Support](https://discord.gg/Sh9k2ts)`)
                             .setColor("#a11616")
                         message.channel.send(havnthighest) 
                     }

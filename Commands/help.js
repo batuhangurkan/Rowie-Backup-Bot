@@ -11,12 +11,12 @@ module.exports = class {
             if(!args[1]) {
               
             let helpEmbed = new RichEmbed()
-            .setTitle("__**Creating**__")
+            .setTitle("__**Oluştur**__")
             .setDescription(`
             
-            __**Security**__
+            __**Güvenlik**__
             
-            **x!backup**          Create & load backups of your servers
+            **x!backup**          Oluşturur & sunucunuzun yedeklerini yükle
             
             __**Others**__
             
