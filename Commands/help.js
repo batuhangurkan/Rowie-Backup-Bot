@@ -18,18 +18,18 @@ module.exports = class {
             
             **x!backup**          Oluşturur & sunucunuzun yedeklerini yükle
             
-            __**Others**__
-            
-            **x!help**            Shows this message
-            **x!info**            Get Information about Xenon
-            **x!invite**          Invite Xenon
-            **x!leave**           Let the bot leave
-            **x!ping**            Pong
-            **x!tiers**           Shows information about Xenon Pro & Turbo
+            __**Diğerleri.**__
+          
+            **x!help**            Bu mesajı gösterir
+            **x!info**            Bilgilendirme mesajını iletir. Xenon
+            **x!invite**          Davet eder Xenon
+            **x!leave**           Bot bırakır.
+            **x!ping**            Ping ölçer.
+            **x!tiers**           Bilgi verir. Xenon Pro & Turbo
             
             `)
-            .setFooter(`Use \`**x!help [command]\` for more info on a command.
-            You can also use \`**x!help [category]\` for more info on a category.`)
+             .setFooter(`Kullanım \`**x!help [command]\` komutu böyle kullan..
+            Kullanım \`**x!help [category]\` katagoriyi böyle kullan.`)
             .setColor("#5DBCD2")
             message.channel.send(helpEmbed)
               return;
@@ -39,17 +39,17 @@ module.exports = class {
                 const embed = new RichEmbed()
                     .setTitle(`**x!backup**
 
-Create & load backups of your servers
+Oluşturur ve yenifen yükler.
 
-__**Commands**__
+__**Komutlar**__
 `)
                     .setDescription(`
-                x!backup create        Create a backup
-                x!backup delete        Delete one of your backups
-                x!backup info          Get information about a backup
-                x!backup list          Get a list of your backups
-                x!backup load          Load a backup
-                x!backup purge         Delete all your backups`)
+                x!backup create        Oluştur , geti yükle
+                x!backup delete        Geri yükle siler
+                x!backup info          Geri yükleme hakkında bilgi verir.
+                x!backup list          Grri yükleme listesi
+                x!backup load          Yüklere bakar.
+                x!backup purge         Geri yüklemelerin hepsini silrr.`)
                     .addBlankField()
                     .setFooter(`Use \`x!help [command]\` for more info on a command.
 You can also use \`x!help [category]\` for more info on a category.`)
