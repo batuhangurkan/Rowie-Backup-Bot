@@ -9,7 +9,7 @@ module.exports = class backup {
     constructor() {
         this.name = "backup",
         this.alias = [""],
-        this.usage = "x!backup"
+        this.usage = "t!backup"
     }
 
 
