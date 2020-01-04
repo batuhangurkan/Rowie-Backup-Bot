@@ -6,7 +6,7 @@ module.exports = class info {
         this.alias = [],
         this.usage = "x!info"
     }
-
+// Asreaper'in Taşşağını Yiyim
     async run(client, message, args) {
         try{
          let infoEmbed = new RichEmbed()

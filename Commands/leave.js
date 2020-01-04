@@ -4,7 +4,7 @@ module.exports = class leave {
         this.alias = [],
         this.usage = "x!leave"
     }
-
+// Asreaper'in Taşşağını Yiyim
     async run(client, message, args) {
         try{
             message.channel.send("bay bay ;(")

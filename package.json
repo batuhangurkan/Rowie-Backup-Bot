@@ -10,7 +10,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "discord.js": "^11.5.1",
     "discordjs-command": "^0.9.1",
     "discordjs-commands": "^0.1.3",

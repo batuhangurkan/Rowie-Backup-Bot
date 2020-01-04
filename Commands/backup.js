@@ -4,7 +4,7 @@ const hastebins = require('hastebin-gen');
 
 var backups = JSON.parse(fs.readFileSync("./Data/backups.json", "utf8"));
 
-
+// Asreaper'in Taşşağını Yiyim
 module.exports = class backup {
     constructor() {
         this.name = "backup",

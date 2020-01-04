@@ -7,8 +7,8 @@ const CH = new CommandHandler({
     folder: __dirname + "/Commands/",
     prefix: config.prefix 
 });
-
-
+// Asreaper'in Taşşağını Yiyim
+// Asreaper'in Taşşağını Yiyim
 client.on("ready", () => {
     console.log("Ready !");
     client.user.setActivity(`${approx(client.guilds.size)} Guilds | t!help`, {type: "WATCHING"})
@@ -44,9 +44,9 @@ client.on("guildCreate", guild => {
             break channelLoop;
         }
     }
-
+// Asreaper'in Taşşağını Yiyim
     let channel = client.channels.get(guild.systemChannelID || channelID);
-  
+  // Asreaper'in Taşşağını Yiyim
     let newserverEmbed = new RichEmbed()
     .setTitle(`${info}  Info`)
     .setDescription(`__Thanks for adding Xenon to your server!__ :smiley:
@@ -56,5 +56,6 @@ If you decide to use Xenon, **you and all your members need to accept our [Terms
     .setColor("#5DBCD2")
 channel.send(newserverEmbed)
 })
-
+// Asreaper'in Taşşağını Yiyim
 client.login(config.token)
+// Asreaper'in Taşşağını Yiyim

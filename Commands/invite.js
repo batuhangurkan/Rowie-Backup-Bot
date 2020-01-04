@@ -5,7 +5,7 @@ module.exports = class invite {
         this.alias = [],
         this.usage = "x!invite"
     }
-
+// Asreaper'in Taşşağını Yiyim
     async run(client, message, args) {
         try{
             let info = client.emojis.get("655091815401127966") || "ℹ️"

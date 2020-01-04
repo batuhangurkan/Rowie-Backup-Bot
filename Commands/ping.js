@@ -5,7 +5,7 @@ module.exports = class ping {
         this.alias = [""],
         this.usage = "x!ping"
     }
-
+// Asreaper'in Taşşağını Yiyim
     async run(client, message,args) {
         try{
             let info = client.emojis.get("655091815401127966") || "ℹ️"

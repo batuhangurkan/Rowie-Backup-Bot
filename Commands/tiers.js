@@ -5,7 +5,7 @@ module.exports = class tiers {
         this.alias = [],
         this.usage = "x!tiers"
     }
-
+// Asreaper'in Taşşağını Yiyim
     async run(client, message, args) {
         try{
             let info = client.emojis.get("655091815401127966") || "ℹ️"

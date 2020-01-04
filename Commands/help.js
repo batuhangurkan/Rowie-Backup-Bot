@@ -5,7 +5,7 @@ module.exports = class {
         this.alias = [""],
         this.usage = "**x!help"
     }
-
+// Asreaper'in Taşşağını Yiyim
     async run(client, message, args) {
         try{
             if(!args[1]) {
