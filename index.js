@@ -11,7 +11,7 @@ const CH = new CommandHandler({
 // Asreaper'in Taşşağını Yiyim
 client.on("ready", () => {
     console.log("Ready !");
-    client.user.setActivity(`${approx(client.guilds.size)} Guilds | !help`, {type: "WATCHING"})
+    client.user.setActivity(`${approx(client.guilds.size)} Guilds | !help !backup`, {type: "WATCHING"})
 });
 
 client.on("message", async (message) => {
@@ -49,10 +49,8 @@ client.on("guildCreate", guild => {
   // Asreaper'in Taşşağını Yiyim
     let newserverEmbed = new RichEmbed()
     .setTitle(`${info}  Info`)
-    .setDescription(`__Thanks for adding Xenon to your server!__ :smiley:
-Use \`x!help\` to get a list of commands. If you need more information, you can look at the [docs](https://docs.discord.club/xenon).
-It's also recommended to join our [discord server](https://discord.club/discord) to get notified about future updates.
-If you decide to use Xenon, **you and all your members need to accept our [Terms of Service!](https://docs.discord.club/xenon/terms-of-service)**`)
+    .setDescription(`__Thanks for adding Rowie to your server!__ :smiley:
+Use \`!help\` to get a list of commands.).`)
     .setColor("#5DBCD2")
 channel.send(newserverEmbed)
 })
