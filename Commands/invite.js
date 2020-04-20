@@ -3,7 +3,7 @@ module.exports = class invite {
     constructor() {
         this.name = "invite",
         this.alias = [],
-        this.usage = "x!invite"
+        this.usage = "!invite"
     }
 // Asreaper'in Taşşağını Yiyim
     async run(client, message, args) {
@@ -12,7 +12,7 @@ module.exports = class invite {
             client.generateInvite(['ADMINISTRATOR']).then(link => {
             let inviteEmbed = new RichEmbed()
             .setTitle(`${info} Info`)
-            .setDescription(`**Invite Xenon**
+            .setDescription(`**Invite Rowie Backup**
 [Xenon](${link})
 [Xenon](https://discordapp.com/oauth2/authorize?client_id=657911738565394452&scope=bot&permissions=268443704) Pro Use \`x!pro\` to get more information.
 [Xenon Turbo](Yakında)`)

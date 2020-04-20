@@ -35,7 +35,7 @@ module.exports = class backup {
                     if (r.comparePositionTo(message.guild.member(client.user.id).highestRole) > 0){
                         let havnthighest = new RichEmbed()
                             .setTitle(`${warning}  Uyarı`)
-                            .setDescription(`Xenon Rolü Sunucudaki En Yüksek Rol Değil, Bu Yedekleme Yüklenirken Bazı Hatalara Neden Olabilir. !
+                            .setDescription(`Rowie Backup Rolü Sunucudaki En Yüksek Rol Değil, Bu Yedekleme Yüklenirken Bazı Hatalara Neden Olabilir. !
                             
                             [Destek](https://discord.gg/Sh9k2ts)`)
                             .setColor("#a11616")
@@ -91,8 +91,8 @@ module.exports = class backup {
                 let result = new RichEmbed()
                 .setTitle(`${info}  Bilgilendirme`)
                 .setDescription(`Yedek oluşturuldu **${message.guild.name}** Yedekleme kimliğiyle \`${id}\``)
-                .addField("Usage", `\`\`\`x!backup load ${id}\`\`\`
-\`\`\`x!backup info ${id}\`\`\``)
+                .addField("Usage", `\`\`\`!backup load ${id}\`\`\`
+\`\`\`!backup info ${id}\`\`\``)
                 .setColor("#5DBCD2")
 
             message.author.send(result)
@@ -100,8 +100,8 @@ module.exports = class backup {
             let resultPublic = new RichEmbed()
             .setTitle(`${green}  Voila!`)
             .setDescription(`Yedek oluşturuldu **${message.guild.name}** Yedekleme kimliğiyle \`${id}\``)
-            .addField("Usage", `\`\`\`x!backup load ${id}\`\`\`
-\`\`\`x!backup info ${id}\`\`\``)
+            .addField("Usage", `\`\`\`!backup load ${id}\`\`\`
+\`\`\`!backup info ${id}\`\`\``)
             .setColor("#59C57B")
 
         m.edit(resultPublic)
@@ -114,7 +114,7 @@ module.exports = class backup {
                 let code = args[2];
                 let errorEmbed = new RichEmbed()
                 .setTitle(`${error}  Hata`)
-                .setDescription(`Argümanı tanımlamayı unuttun backup_id. Use x!help daha fazla bilgi için yedek yük.
+                .setDescription(`Argümanı tanımlamayı unuttun backup_id. Use !help daha fazla bilgi için yedek yük.
 [Support](https://discord.gg/)`)
                 .setColor("#a11616")
                 if(!code) return message.channel.send(errorEmbed)
@@ -143,7 +143,7 @@ module.exports = class backup {
                 let code = args[2];
                 let errorEmbed = new RichEmbed()
                 .setTitle(`${error}  Hata`)
-                .setDescription(`Backup_id argümanını tanımlamayı unuttunuz. Daha fazla bilgi için x! Help backup load kullanın.
+                .setDescription(`Backup_id argümanını tanımlamayı unuttunuz. Daha fazla bilgi için ! Help backup load kullanın.
 [Support](https://discord.club/discord)`)
                 if(!code) return message.channel.send(errorEmbed)
                 let cantfindbackup = new RichEmbed()
@@ -187,7 +187,7 @@ module.exports = class backup {
                 let id = args[2];
                 let MissingbackupinfoEmbed = new RichEmbed()
                 .setTitle(`${error}  Error`)
-                    .setDescription(`You forgot to define the argument **backup_id**. Use \`x!help backup info\` for more information   
+                    .setDescription(`You forgot to define the argument **backup_id**. Use \`!help backup info\` for more information   
                     [Support](https://discord.club/discord)`)
                 .setColor("#a11616")
                 if(!id) return message.channel.send(MissingbackupinfoEmbed)
@@ -265,22 +265,22 @@ __Tgeri alınamaz!__`)
             if(!args[1]) {
                 
                 const embed = new RichEmbed()
-                .setTitle(`**x!backup**
+                .setTitle(`**!backup**
 
 Sunucularınızın yedeklerini oluşturun ve yükleyin
 
 __**Komutlar**__
 `)
                 .setDescription(`
-                x!backup create        Yedek oluşturma
-                x!backup delete        Yedeklemelerinizden birini silin
-                x!backup info          Yedekleme hakkında bilgi alma
-                x!backup list          Yedeklemelerinizin bir listesini alın
-                x!backup load          Bir yedek yükleyin
-                x!backup purge         Tüm yedeklerinizi silin`)
+                !backup create        Yedek oluşturma
+                !backup delete        Yedeklemelerinizden birini silin
+                !backup info          Yedekleme hakkında bilgi alma
+                !backup list          Yedeklemelerinizin bir listesini alın
+                !backup load          Bir yedek yükleyin
+                !backup purge         Tüm yedeklerinizi silin`)
                 .addBlankField()
-                .setFooter(`Use \`x!help [command]\` for more info on a command.
-You can also use \`x!help [category]\` for more info on a category.`)
+                .setFooter(`Use \`!help [command]\` for more info on a command.
+You can also use \`!help [category]\` for more info on a category.`)
                 .setColor("#5DBCD2")
                 message.channel.send(embed)
                 return;

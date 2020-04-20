@@ -3,7 +3,7 @@ module.exports = class {
     constructor() {
         this.name = "help",
         this.alias = [""],
-        this.usage = "**x!help"
+        this.usage = "**!help"
     }
 // Asreaper'in Taşşağını Yiyim
     async run(client, message, args) {
@@ -16,19 +16,19 @@ module.exports = class {
             
             __**Güvenlik**__
             
-            **t!backup**          Oluşturur & sunucunuzun yedeklerini yükle
+            **!backup**          Oluşturur & sunucunuzun yedeklerini yükle
             
             __**Diğerleri.**__
           
-            **t!help**            Bu mesajı gösterir
-            **t!info**            Bilgilendirme mesajını iletir. Xenon
-            **t!invite**          Davet eder Xenon
-            **t!leave**           Bot bırakır.
-            **t!ping**            Ping ölçer.
-            **t!tiers**           Bilgi verir. Xenon Pro & Turbo
+            **!help**            Bu mesajı gösterir
+            **!info**            Bilgilendirme mesajını iletir. Rowie
+            **!invite**          Davet eder Xenon
+            **!leave**           Bot bırakır.
+            **!ping**            Ping ölçer.
+            **!tiers**           Bilgi verir. Rowie Pro & Turbo
             
             `)
-             .setFooter(`Kullanım \`**x!help [command]\` komutu böyle kullan..
+             .setFooter(`Kullanım \`**!help [command]\` komutu böyle kullan..
             Kullanım \`**x!help [category]\` katagoriyi böyle kullan.`)
             .setColor("#5DBCD2")
             message.channel.send(helpEmbed)
@@ -37,21 +37,21 @@ module.exports = class {
 
             if(args[1] === "backup") {
                 const embed = new RichEmbed()
-                    .setTitle(`**x!backup**
+                    .setTitle(`**!backup**
 
 Oluşturur ve yenifen yükler.
 
 __**Komutlar**__
 `)
                     .setDescription(`
-                t!backup create        Oluştur , geti yükle
-                t!backup delete        Geri yükle siler
-                t!backup info          Geri yükleme hakkında bilgi verir.
-                t!backup list          Grri yükleme listesi
-                t!backup load          Yüklere bakar.
-                t!backup purge         Geri yüklemelerin hepsini silrr.`)
+                !backup create        Oluştur , geti yükle
+                !backup delete        Geri yükle siler
+                !backup info          Geri yükleme hakkında bilgi verir.
+                !backup list          Grri yükleme listesi
+                !backup load          Yüklere bakar.
+                !backup purge         Geri yüklemelerin hepsini silrr.`)
                     .addBlankField()
-                    .setFooter(`Use \`x!help [command]\` for more info on a command.
+                    .setFooter(`Use \`!help [command]\` for more info on a command.
 You can also use \`x!help [category]\` for more info on a category.`)
                     .setColor("#5DBCD2")
                 message.channel.send(embed)
@@ -59,7 +59,7 @@ You can also use \`x!help [category]\` for more info on a category.`)
 
             if(args[1] === "help") {
                 let showsThisMessageEmbed = new RichEmbed()
-                    .setTitle("**x!help [command]**")
+                    .setTitle("**!help [command]**")
                     .setDescription("Shows this message")
                     .addBlankField()
                     .setFooter(`Use \`t!help [command]\` for more info on a command.
@@ -70,7 +70,7 @@ You can also use \`x!help [category]\` for more info on a category.`)
 
             if(args[1] === "info") {
                 let infoEmbed = new RichEmbed()
-                    .setTitle("**t!info**")
+                    .setTitle("**!info**")
                     .setDescription("Get Information about Xenon")
                     .addBlankField()
                     .setFooter(`Use \`t!help [command]\` for more info on a command.
@@ -81,7 +81,7 @@ You can also use \`x!help [category]\` for more info on a category.`)
 
             if(args[1] === "invite") {
                 let inviteEmbed = new RichEmbed()
-                    .setTitle("**t!invite**")
+                    .setTitle("**!invite**")
                     .setDescription("Invite TeaTone")
                     .addBlankField()
                     .setFooter(`Use \`x!help [command]\` for more info on a command.
@@ -92,7 +92,7 @@ You can also use \`x!help [category]\` for more info on a category.`)
 
             if (args[1] === "leave") {
                 let inviteEmbed = new RichEmbed()
-                    .setTitle("**x!leave**")
+                    .setTitle("**!leave**")
                     .setDescription("Let the bot leave")
                     .addBlankField()
                     .setFooter(`Use \`x!help [command]\` for more info on a command.
@@ -103,7 +103,7 @@ You can also use \`x!help [category]\` for more info on a category.`)
 
             if (args[1] === "ping") {
                 let inviteEmbed = new RichEmbed()
-                    .setTitle("**t!ping**")
+                    .setTitle("**!ping**")
                     .setDescription("Pong")
                     .addBlankField()
                     .setFooter(`Use \`t!help [command]\` for more info on a command.
@@ -115,7 +115,7 @@ You can also use \`x!help [category]\` for more info on a category.`)
 
             if (args[1] === "tiers") {
                 let inviteEmbed = new RichEmbed()
-                    .setTitle("**t!tiers**")
+                    .setTitle("**!tiers**")
                     .setDescription("Shows information about Xenon Pro & Turbo")
                     .addBlankField()
                     .setFooter(`Use \`t!help [command]\` for more info on a command.

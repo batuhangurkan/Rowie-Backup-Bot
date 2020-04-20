@@ -4,7 +4,7 @@ module.exports = class info {
     constructor() {
         this.name = "info",
         this.alias = [],
-        this.usage = "x!info"
+        this.usage = "!info"
     }
 // Asreaper'in Taşşağını Yiyim
     async run(client, message, args) {

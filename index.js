@@ -11,7 +11,7 @@ const CH = new CommandHandler({
 // Asreaper'in Taşşağını Yiyim
 client.on("ready", () => {
     console.log("Ready !");
-    client.user.setActivity(`${approx(client.guilds.size)} Guilds | t!help`, {type: "WATCHING"})
+    client.user.setActivity(`${approx(client.guilds.size)} Guilds | !help`, {type: "WATCHING"})
 });
 
 client.on("message", async (message) => {

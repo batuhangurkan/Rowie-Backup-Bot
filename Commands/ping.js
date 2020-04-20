@@ -3,7 +3,7 @@ module.exports = class ping {
     constructor() {
         this.name = "ping",
         this.alias = [""],
-        this.usage = "x!ping"
+        this.usage = "!ping"
     }
 // Asreaper'in Taşşağını Yiyim
     async run(client, message,args) {
