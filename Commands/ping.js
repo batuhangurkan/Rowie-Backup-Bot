@@ -11,7 +11,7 @@ module.exports = class ping {
             let info = client.emojis.get("655091815401127966") || "ℹ️"
             let pingEmbed = new RichEmbed()
             .setTitle(`${info} Info`)
-            .setDescription(`** gecikme sürem **  **${Math.round(client.ping)}ms**.`)
+            .setDescription(`** Gecikme Sürem **  **${Math.round(client.ping)}ms**.`)
             .setColor("#5DBCD2")
             message.channel.send(pingEmbed)
         }catch(e) {
