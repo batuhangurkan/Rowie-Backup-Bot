@@ -10,15 +10,14 @@ module.exports = class info {
     async run(client, message, args) {
         try{
          let infoEmbed = new RichEmbed()
-         .setTitle("**Xenon**")
-         .setThumbnail("https://cdn.discordapp.com/avatars/416358583220043796/8f702ebf579bce2d7a6f0a4419ac5faf.webp?size=1024")
+         .setTitle("**Rowie Backup**")
+         .setThumbnail("https://images-ext-2.discordapp.net/external/PZxaF4vBa7oJ0qBG5rz-gp51VuPDnsdUTGAD2ALNyJI/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/591250472652898315/417582cb7eebdc7cc29f66ae8ea42939.png?width=475&height=475")
          .setDescription("Server Backups, Templates and more")
-         .addField("Davet", "[Click Here](https://discordapp.com/oauth2/authorize?client_id=416358583220043796&scope=bot&permissions=8)", true)
-         .addField("Discord", "[Click Here](https://discord.club/discord)")
-         .addField("Prefix", "x!", true)
+         .addField("Davet", "[Click Here](https://discordapp.com/oauth2/authorize?client_id=701788656695902258&scope=bot&permissions=8)", true)
+         .addField("Prefix", "!", true)
          .addField("Sunucular", client.guilds.size, true)
          .addField("Kullanıcılar:", client.users.size, true)
-         .setFooter("Owned by : RealCode")
+         .setFooter("Owned by : Scréw")
             message.channel.send(infoEmbed)
         }catch(e) {
             throw e;
