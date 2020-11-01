@@ -3,7 +3,7 @@ module.exports = class tiers {
     constructor() {
         this.name = "tiers",
         this.alias = [],
-        this.usage = "!tiers"
+        this.usage = "-tiers"
     }
 // Asreaper'in Taşşağını Yiyim
     async run(client, message, args) {

@@ -2,7 +2,7 @@ module.exports = class leave {
     constructor() {
         this.name = "leave",
         this.alias = [],
-        this.usage = "!leave"
+        this.usage = "-leave"
     }
 // Asreaper'in Taşşağını Yiyim
     async run(client, message, args) {

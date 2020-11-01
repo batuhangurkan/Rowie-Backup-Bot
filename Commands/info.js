@@ -4,7 +4,7 @@ module.exports = class info {
     constructor() {
         this.name = "info",
         this.alias = [],
-        this.usage = "!info"
+        this.usage = "-info"
     }
 // Asreaper'in Taşşağını Yiyim
     async run(client, message, args) {
@@ -14,7 +14,7 @@ module.exports = class info {
          .setThumbnail("https://images-ext-2.discordapp.net/external/PZxaF4vBa7oJ0qBG5rz-gp51VuPDnsdUTGAD2ALNyJI/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/591250472652898315/417582cb7eebdc7cc29f66ae8ea42939.png?width=475&height=475")
          .setDescription("Server Backups, Templates and more")
          .addField("Davet", "[Click Here](https://discordapp.com/oauth2/authorize?client_id=701788656695902258&scope=bot&permissions=8)", true)
-         .addField("Prefix", "!", true)
+         .addField("Prefix", "-", true)
          .addField("Sunucular", client.guilds.size, true)
          .addField("Kullanıcılar:", client.users.size, true)
          .setFooter("Owned by : Scréw")

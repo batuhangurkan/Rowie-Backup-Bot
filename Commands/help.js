@@ -16,20 +16,20 @@ module.exports = class {
             
             __**Güvenlik**__
             
-            **!backup**          Oluşturur & sunucunuzun yedeklerini yükle
+            **-backup**          Oluşturur & sunucunuzun yedeklerini yükle
             
             __**Diğerleri.**__
           
-            **!help**            Bu mesajı gösterir
-            **!info**            Bilgilendirme mesajını iletir. Rowie
-            **!invite**          Davet eder Xenon
-            **!leave**           Bot bırakır.
-            **!ping**            Ping ölçer.
-            **!tiers**           Bilgi verir. Rowie Pro & Turbo
+            **-help**            Bu mesajı gösterir
+            **-info**            Bilgilendirme mesajını iletir. Rowie
+            **-invite**          Davet eder 
+            **-leave**           Bot çıkış yapar.
+            **-ping**            Ping ölçer.
+            **-tiers**           Bilgi verir. Rowie Pro & Turbo
             
             `)
-             .setFooter(`Kullanım \`**!help [command]\` komutu böyle kullan..
-            Kullanım \`**x!help [category]\` katagoriyi böyle kullan.`)
+             .setFooter(`Kullanım \`**-help [command]\` komutu böyle kullan..
+            Kullanım \`**-help [category]\` katagoriyi böyle kullan.`)
             .setColor("#5DBCD2")
             message.channel.send(helpEmbed)
               return;
