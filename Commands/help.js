@@ -44,70 +44,70 @@ Oluşturur ve yenifen yükler.
 __**Komutlar**__
 `)
                     .setDescription(`
-                !backup create        Oluştur , geti yükle
-                !backup delete        Geri yükle siler
-                !backup info          Geri yükleme hakkında bilgi verir.
-                !backup list          Grri yükleme listesi
-                !backup load          Yüklere bakar.
-                !backup purge         Geri yüklemelerin hepsini silrr.`)
+                -backup create        Oluştur , geti yükle
+                -backup delete        Geri yükle siler
+                -backup info          Geri yükleme hakkında bilgi verir.
+                -backup list          Grri yükleme listesi
+                -backup load          Yüklere bakar.
+                -backup purge         Geri yüklemelerin hepsini silrr.`)
                     .addBlankField()
-                    .setFooter(`Use \`!help [command]\` for more info on a command.
-You can also use \`x!help [category]\` for more info on a category.`)
+                    .setFooter(`Use \`-help [command]\` for more info on a command.
+You can also use \`-help [category]\` for more info on a category.`)
                     .setColor("#5DBCD2")
                 message.channel.send(embed)
             }
 
             if(args[1] === "help") {
                 let showsThisMessageEmbed = new RichEmbed()
-                    .setTitle("**!help [command]**")
+                    .setTitle("**-help [command]**")
                     .setDescription("Shows this message")
                     .addBlankField()
-                    .setFooter(`Use \`t!help [command]\` for more info on a command.
-You can also use \`x!help [category]\` for more info on a category.`)
+                    .setFooter(`Use \`-help [command]\` for more info on a command.
+You can also use \`-help [category]\` for more info on a category.`)
                     .setColor("#5DBCD2")
                     message.channel.send(showsThisMessageEmbed);
             }
 
             if(args[1] === "info") {
                 let infoEmbed = new RichEmbed()
-                    .setTitle("**!info**")
-                    .setDescription("Get Information about Xenon")
+                    .setTitle("**-info**")
+                    .setDescription("Get Information about Rowie Backup")
                     .addBlankField()
-                    .setFooter(`Use \`t!help [command]\` for more info on a command.
-You can also use \`x!help [category]\` for more info on a category.`)
+                    .setFooter(`Use \`-help [command]\` for more info on a command.
+You can also use \`-help [category]\` for more info on a category.`)
                     .setColor("#5DBCD2")
                     message.channel.send(infoEmbed);
             }
 
             if(args[1] === "invite") {
                 let inviteEmbed = new RichEmbed()
-                    .setTitle("**!invite**")
+                    .setTitle("**-invite**")
                     .setDescription("Invite TeaTone")
                     .addBlankField()
-                    .setFooter(`Use \`x!help [command]\` for more info on a command.
-You can also use \`x!help [category]\` for more info on a category.`)
+                    .setFooter(`Use \`-help [command]\` for more info on a command.
+You can also use \`-help [category]\` for more info on a category.`)
                     .setColor("#5DBCD2")
                     message.channel.send(inviteEmbed)
             }
 
             if (args[1] === "leave") {
                 let inviteEmbed = new RichEmbed()
-                    .setTitle("**!leave**")
+                    .setTitle("**-leave**")
                     .setDescription("Let the bot leave")
                     .addBlankField()
-                    .setFooter(`Use \`x!help [command]\` for more info on a command.
-You can also use \`x!help [category]\` for more info on a category.`)
+                    .setFooter(`Use \`-help [command]\` for more info on a command.
+You can also use \`-help [category]\` for more info on a category.`)
                     .setColor("#5DBCD2")
                 message.channel.send(inviteEmbed)
             }
 
             if (args[1] === "ping") {
                 let inviteEmbed = new RichEmbed()
-                    .setTitle("**!ping**")
+                    .setTitle("**-ping**")
                     .setDescription("Pong")
                     .addBlankField()
-                    .setFooter(`Use \`t!help [command]\` for more info on a command.
-You can also use \`x!help [category]\` for more info on a category.`)
+                    .setFooter(`Use \`-help [command]\` for more info on a command.
+You can also use \`-help [category]\` for more info on a category.`)
                     .setColor("#5DBCD2")
                 message.channel.send(inviteEmbed)
             }
@@ -115,11 +115,11 @@ You can also use \`x!help [category]\` for more info on a category.`)
 
             if (args[1] === "tiers") {
                 let inviteEmbed = new RichEmbed()
-                    .setTitle("**!tiers**")
-                    .setDescription("Shows information about Xenon Pro & Turbo")
+                    .setTitle("**-tiers**")
+                    .setDescription("Shows information about Rowie Backup Pro & Turbo")
                     .addBlankField()
-                    .setFooter(`Use \`t!help [command]\` for more info on a command.
-You can also use \`x!help [category]\` for more info on a category.`)
+                    .setFooter(`Use \`-help [command]\` for more info on a command.
+You can also use \`-help [category]\` for more info on a category.`)
                     .setColor("#5DBCD2")
                 message.channel.send(inviteEmbed)
             }

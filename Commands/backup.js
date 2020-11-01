@@ -114,7 +114,7 @@ module.exports = class backup {
                 let code = args[2];
                 let errorEmbed = new RichEmbed()
                 .setTitle(`${error}  Hata`)
-                .setDescription(`Argümanı tanımlamayı unuttun backup_id. Use !help daha fazla bilgi için yedek yük.
+                .setDescription(`Argümanı tanımlamayı unuttun backup_id. Use -help daha fazla bilgi için yedek yük.
 [Support](https://discord.gg/)`)
                 .setColor("#a11616")
                 if(!code) return message.channel.send(errorEmbed)
@@ -187,7 +187,7 @@ module.exports = class backup {
                 let id = args[2];
                 let MissingbackupinfoEmbed = new RichEmbed()
                 .setTitle(`${error}  Error`)
-                    .setDescription(`You forgot to define the argument **backup_id**. Use \`!help backup info\` for more information   
+                    .setDescription(`You forgot to define the argument **backup_id**. Use \`-help backup info\` for more information   
                     [Support](https://discord.club/discord)`)
                 .setColor("#a11616")
                 if(!id) return message.channel.send(MissingbackupinfoEmbed)
@@ -272,15 +272,15 @@ Sunucularınızın yedeklerini oluşturun ve yükleyin
 __**Komutlar**__
 `)
                 .setDescription(`
-                !backup create        Yedek oluşturma
-                !backup delete        Yedeklemelerinizden birini silin
-                !backup info          Yedekleme hakkında bilgi alma
-                !backup list          Yedeklemelerinizin bir listesini alın
-                !backup load          Bir yedek yükleyin
-                !backup purge         Tüm yedeklerinizi silin`)
+                -backup create        Yedek oluşturma
+                -backup delete        Yedeklemelerinizden birini silin
+                -backup info          Yedekleme hakkında bilgi alma
+                -backup list          Yedeklemelerinizin bir listesini alın
+                -backup load          Bir yedek yükleyin
+                -backup purge         Tüm yedeklerinizi silin`)
                 .addBlankField()
-                .setFooter(`Use \`!help [command]\` for more info on a command.
-You can also use \`!help [category]\` for more info on a category.`)
+                .setFooter(`Use \`-help [command]\` for more info on a command.
+You can also use \`-help [category]\` for more info on a category.`)
                 .setColor("#5DBCD2")
                 message.channel.send(embed)
                 return;
