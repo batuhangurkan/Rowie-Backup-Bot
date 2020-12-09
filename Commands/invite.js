@@ -13,8 +13,7 @@ module.exports = class invite {
             let inviteEmbed = new RichEmbed()
             .setTitle(`${info} Info`)
             .setDescription(`**Invite Rowie Backup**
-[Rowie Backup](${link})
-[Rowie Backup](https://discordapp.com/oauth2/authorize?client_id=701788656695902258&scope=bot&permissions=268443704) Pro Use \`!pro\` to get more information.
+[Rowie Backup](https://discord.com/api/oauth2/authorize?client_id=786315491199156255&permissions=8&scope=bot)
 [Rowie Backup Turbo](Yakında)`)
             .setColor("#5DBCD2")
             message.channel.send(inviteEmbed);
